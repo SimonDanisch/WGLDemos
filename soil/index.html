@@ -1,0 +1,123 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js/build/three.js"></script>
+<link href="styled.css" rel="stylesheet" type="text/css">
+<script src="wglmakie.js"></script>
+
+<script>
+    window.js_call_session_id = '7654492d-870c-454d-9737-6ab35d0a002d';
+    window.websocket_proxy_url = '';
+</script>
+<script src="msgpack.min.js"></script>
+<script src="core.js"></script>
+<script>
+function __on_document_load__(){
+    try {
+        
+
+
+function init_function(__data_dependencies) {
+            {
+        const func = (value=> update_node_attribute((document.querySelector('[data-jscall-id="277"]')), 'step', value));
+        register_onjs(func, '7345769106956609648');
+        }
+
+        {
+        const func = (value=> update_node_attribute((document.querySelector('[data-jscall-id="277"]')), 'max', value));
+        register_onjs(func, '18009889341264693954');
+        }
+
+        {
+        const func = (value=> update_node_attribute((document.querySelector('[data-jscall-id="277"]')), 'min', value));
+        register_onjs(func, '17638882146143756774');
+        }
+
+        {
+        const func = (value=> update_node_attribute((document.querySelector('[data-jscall-id="277"]')), 'value', value));
+        register_onjs(func, '6062353512480700186');
+        }
+
+        {
+        const func = (function setup([scenes, duplicates]){
+    const canvas = (document.querySelector('[data-jscall-id="278"]'))
+    const renderer = WGLMakie.threejs_module(canvas, "3322207645016914171", 860, 950)
+    WGLMakie.set_duplicate_references(duplicates)
+    const three_scenes = scenes.map(WGLMakie.deserialize_scene)
+    const cam = new THREE.PerspectiveCamera(45, 1, 0, 100)
+    console.log(three_scenes)
+    WGLMakie.start_renderloop(renderer, three_scenes, cam)
+
+    function get_plot(plot_uuid) {
+        for (const idx in three_scenes) {
+            const plot = three_scenes[idx].getObjectByName(plot_uuid)
+            if (plot) {
+                return plot
+            }
+        }
+        return undefined;
+    }
+
+    function add_plot(scene, plot) {
+        const mesh = WGLMakie.deserialize_plot(plot);
+    }
+    const context = {
+        three_scenes,
+        add_plot,
+        get_plot,
+        renderer
+    }
+    put_on_heap('73', context);
+}
+);
+        register_onjs(func, '12251293685163421665');
+        }
+
+        {const value = deserialize_js(__data_dependencies[0]);
+                          registered_observables['12251293685163421665'] = value;
+                          // update all onjs callbacks
+                          run_js_callbacks('12251293685163421665', value);}
+        {
+        const func = (function update_size(canvas_width){
+    const context = get_heap_object('73');
+    const w_h = deserialize_js(canvas_width);
+    context.renderer.setSize(w_h[0], w_h[1]);
+    var canvas = (document.querySelector('[data-jscall-id="278"]'))
+    canvas.style.width = w_h[0];
+    canvas.style.height = w_h[1];
+});
+        register_onjs(func, '13027757097569451749');
+        }
+
+
+}
+init_from_file(init_function, "7654492d-870c-454d-9737-6ab35d0a002d.msgpack");
+
+    } catch (e) {
+        websocket_send({
+            msg_type: JSDoneLoading,
+            exception: String(e),
+            message: "Error during initialization",
+            stacktrace: e.stack
+        });
+    }
+};
+
+</script>
+</head>
+<body onload=__on_document_load__()>
+    <div id="application-dom" data-jscall-id="279">
+  <div style="display: flex;&#10;flex-direction: column;&#10;align-items: center;&#10;text-align: center;&#10;" data-jscall-id="276">
+    <h1 data-jscall-id="272">Heterogeneity</h1>
+    <div data-jscall-id="273">interactive visualization of the spatio-temporal heterogeneity of soil moisture, temperature and respiration in a hectare of a seemingly homogeneous grassland
+</div>
+    <a href="https://nextjournal.com/heterogeneity484/heterogeneity-project/" data-jscall-id="274">source</a>
+    <div style="width: 700px" data-jscall-id="275">
+      <input step="1" max="248" min="1" data-jscall-id="277" value="1" oninput="update_obs('6062353512480700186', parseFloat(value))" type="range" />
+    </div>
+    <canvas height="950" data-jscall-id="278" width="860"></canvas>
+  </div>
+</div>
+</body>
+</html>
+
