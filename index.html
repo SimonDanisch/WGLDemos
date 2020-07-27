@@ -1,0 +1,168 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js/build/three.js"></script>
+<link href="styled.css" rel="stylesheet" type="text/css">
+<script src="wglmakie.js"></script>
+<link href="tailwind.min.css" rel="stylesheet" type="text/css">
+
+<script>
+    window.js_call_session_id = '4094c943-d935-4aaf-8e8f-7d59eb6eb49a';
+    window.websocket_proxy_url = '';
+</script>
+<script src="msgpack.min.js"></script>
+<script src="core.js"></script>
+<script>
+function __on_document_load__(){
+    try {
+        
+
+
+function init_function(__data_dependencies) {
+            {const value = deserialize_js(__data_dependencies[0]);
+                          registered_observables['6023590671344019829'] = value;
+                          // update all onjs callbacks
+                          run_js_callbacks('6023590671344019829', value);}
+        {const value = deserialize_js(__data_dependencies[1]);
+                          registered_observables['6023590671344019829'] = value;
+                          // update all onjs callbacks
+                          run_js_callbacks('6023590671344019829', value);}
+        {const value = deserialize_js(__data_dependencies[2]);
+                          registered_observables['6023590671344019829'] = value;
+                          // update all onjs callbacks
+                          run_js_callbacks('6023590671344019829', value);}
+        {const value = deserialize_js(__data_dependencies[3]);
+                          registered_observables['6023590671344019829'] = value;
+                          // update all onjs callbacks
+                          run_js_callbacks('6023590671344019829', value);}
+        {const value = deserialize_js(__data_dependencies[4]);
+                          registered_observables['6023590671344019829'] = value;
+                          // update all onjs callbacks
+                          run_js_callbacks('6023590671344019829', value);}
+        {const value = deserialize_js(__data_dependencies[5]);
+                          registered_observables['6023590671344019829'] = value;
+                          // update all onjs callbacks
+                          run_js_callbacks('6023590671344019829', value);}
+        {const value = deserialize_js(__data_dependencies[6]);
+                          registered_observables['6023590671344019829'] = value;
+                          // update all onjs callbacks
+                          run_js_callbacks('6023590671344019829', value);}
+        {const value = 64;
+                          registered_observables['57677375528638905'] = value;
+                          // update all onjs callbacks
+                          run_js_callbacks('57677375528638905', value);}
+        {
+        const func = (value=> update_node_attribute((document.querySelector('[data-jscall-id="174"]')), 'step', value));
+        register_onjs(func, '12332855736847809040');
+        }
+
+        {
+        const func = (value=> update_node_attribute((document.querySelector('[data-jscall-id="174"]')), 'max', value));
+        register_onjs(func, '381989836514375915');
+        }
+
+        {
+        const func = (value=> update_node_attribute((document.querySelector('[data-jscall-id="174"]')), 'min', value));
+        register_onjs(func, '6562312995820113980');
+        }
+
+        {
+        const func = (value=> update_node_attribute((document.querySelector('[data-jscall-id="174"]')), 'value', value));
+        register_onjs(func, '57677375528638905');
+        }
+
+        {
+        const func = (function setup([scenes, duplicates]){
+    const canvas = (document.querySelector('[data-jscall-id="175"]'))
+    const renderer = WGLMakie.threejs_module(canvas, "5862133206262734678", 960, 540)
+    WGLMakie.set_duplicate_references(duplicates)
+    const three_scenes = scenes.map(WGLMakie.deserialize_scene)
+    const cam = new THREE.PerspectiveCamera(45, 1, 0, 100)
+    console.log(three_scenes)
+    WGLMakie.start_renderloop(renderer, three_scenes, cam)
+
+    function get_plot(plot_uuid) {
+        for (const idx in three_scenes) {
+            const plot = three_scenes[idx].getObjectByName(plot_uuid)
+            if (plot) {
+                return plot
+            }
+        }
+        return undefined;
+    }
+
+    function add_plot(scene, plot) {
+        const mesh = WGLMakie.deserialize_plot(plot);
+    }
+    const context = {
+        three_scenes,
+        add_plot,
+        get_plot,
+        renderer
+    }
+    put_on_heap('56', context);
+}
+);
+        register_onjs(func, '14631534803958511757');
+        }
+
+        {const value = deserialize_js(__data_dependencies[7]);
+                          registered_observables['14631534803958511757'] = value;
+                          // update all onjs callbacks
+                          run_js_callbacks('14631534803958511757', value);}
+        {
+        const func = (function update_size(canvas_width){
+    const context = get_heap_object('56');
+    const w_h = deserialize_js(canvas_width);
+    context.renderer.setSize(w_h[0], w_h[1]);
+    var canvas = (document.querySelector('[data-jscall-id="175"]'))
+    canvas.style.width = w_h[0];
+    canvas.style.height = w_h[1];
+});
+        register_onjs(func, '10844442492684182109');
+        }
+
+        {put_on_heap('57', window); undefined;}
+        get_heap_object('57')['dont_even_try_to_reconnect'] = true;
+        get_heap_object('57')['offline_state'] = __data_dependencies[8];
+        {
+        const func = (function (val){
+    const messages = window.offline_state[val]
+    // not all states trigger events!
+    if (messages){
+        process_message(messages)
+    }
+});
+        register_onjs(func, '57677375528638905');
+        }
+
+
+}
+init_from_file(init_function, "4094c943-d935-4aaf-8e8f-7d59eb6eb49a.msgpack");
+
+    } catch (e) {
+        websocket_send({
+            msg_type: JSDoneLoading,
+            exception: String(e),
+            message: "Error during initialization",
+            stacktrace: e.stack
+        });
+    }
+};
+
+</script>
+</head>
+<body onload=__on_document_load__()>
+    <div id="application-dom" data-jscall-id="176">
+  <div data-jscall-id="173">
+    <div class="flex flex-col items-center" data-jscall-id="172">
+      <div class="w-56" data-jscall-id="171">
+        <input step="1" max="64" min="1" data-jscall-id="174" value="1" oninput="update_obs('57677375528638905', parseFloat(value))" type="range" />
+      </div>
+      <canvas height="540" data-jscall-id="175" width="960"></canvas>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+
