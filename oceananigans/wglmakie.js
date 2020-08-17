@@ -5,9 +5,11 @@ const WGLMakie = function (){
             // we just support 3d cameras atm
             return
         }
+        const w = camera_matrices.resolution.value.x
+        const h = camera_matrices.resolution.value.y
         const camera = new THREE.PerspectiveCamera(
             cam3d.fov,
-            domElement.width/domElement.height,
+            w/h,
             cam3d.near, cam3d.far);
 
         const center = new THREE.Vector3(...cam3d.lookat);
@@ -380,7 +382,6 @@ const WGLMakie = function (){
             plot.uniforms.projection = cam.projection
             plot.uniforms.projectionview = cam.projectionview
             plot.uniforms.resolution = cam.resolution
-            console.log(cam.resolution)
             plot.uniforms.eyeposition = cam.eyeposition
             const p = deserialize_plot(plot)
             scene.add(p)
@@ -392,7 +393,6 @@ const WGLMakie = function (){
         on_update(updater, ([name, data]) => {
             const uniform = mesh.material.uniforms[name]
             const deserialized = deserialize_three(deserialize_js(data))
-
             if (uniform.value.isTexture) {
                 uniform.value.image.data.set(deserialized)
                 uniform.value.needsUpdate = true
