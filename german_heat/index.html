@@ -1,0 +1,218 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="styled.css" rel="stylesheet" type="text/css">
+<script src="2_wglmakie.js"></script>
+<link href="tailwind.min.css" rel="stylesheet" type="text/css">
+<link href="markdown.css" rel="stylesheet" type="text/css">
+<script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js/build/three.js"></script>
+
+<script>
+    window.js_call_session_id = '89787fe6-df25-4204-9b0f-ed3a852bde7c';
+    window.websocket_proxy_url = '';
+</script>
+<script src="3_msgpack.min.js"></script>
+<script src="3_core.js"></script>
+<script>
+function __on_document_load__(){
+    try {
+        
+
+
+function init_function(__data_dependencies) {
+            {
+        const func = (value=> update_node_attribute((document.querySelector('[data-jscall-id="448"]')), 'step', value));
+        register_onjs(func, '5992549845749763564');
+        }
+
+        {
+        const func = (value=> update_node_attribute((document.querySelector('[data-jscall-id="448"]')), 'max', value));
+        register_onjs(func, '6621683660652466950');
+        }
+
+        {
+        const func = (value=> update_node_attribute((document.querySelector('[data-jscall-id="448"]')), 'min', value));
+        register_onjs(func, '14743835556997901112');
+        }
+
+        {
+        const func = (value=> update_node_attribute((document.querySelector('[data-jscall-id="448"]')), 'value', value));
+        register_onjs(func, '6077739256351139094');
+        }
+
+        {
+        const func = ((html)=> update_dom_node((document.querySelector('[data-jscall-id="449"]')), html));
+        register_onjs(func, '6299527719929835164');
+        }
+
+        {
+        const func = (function setup([scenes, duplicates]){
+    const canvas = (document.querySelector('[data-jscall-id="450"]'))
+    const renderer = WGLMakie.threejs_module(canvas, "9212402255751434961", 1200, 700)
+    WGLMakie.set_duplicate_references(duplicates)
+    const three_scenes = scenes.map(WGLMakie.deserialize_scene)
+    const cam = new THREE.PerspectiveCamera(45, 1, 0, 100)
+    console.log(three_scenes)
+    WGLMakie.start_renderloop(renderer, three_scenes, cam)
+
+    function get_plot(plot_uuid) {
+        for (const idx in three_scenes) {
+            const plot = three_scenes[idx].getObjectByName(plot_uuid)
+            if (plot) {
+                return plot
+            }
+        }
+        return undefined;
+    }
+
+    function add_plot(scene, plot) {
+        const mesh = WGLMakie.deserialize_plot(plot);
+    }
+    const context = {
+        three_scenes,
+        add_plot,
+        get_plot,
+        renderer
+    }
+    put_on_heap('61', context);
+}
+);
+        register_onjs(func, '15216996596131268502');
+        }
+
+        {const value = deserialize_js(__data_dependencies[0]);
+                          registered_observables['15216996596131268502'] = value;
+                          // update all onjs callbacks
+                          run_js_callbacks('15216996596131268502', value);}
+        {
+        const func = (function update_size(canvas_width){
+    const context = get_heap_object('61');
+    const w_h = deserialize_js(canvas_width);
+    context.renderer.setSize(w_h[0], w_h[1]);
+    var canvas = (document.querySelector('[data-jscall-id="450"]'))
+    canvas.style.width = w_h[0];
+    canvas.style.height = w_h[1];
+});
+        register_onjs(func, '4680399255922841411');
+        }
+
+        {put_on_heap('62', window); undefined;}
+        get_heap_object('62')['dont_even_try_to_reconnect'] = true;
+        {
+        const func = (value=> update_node_attribute((document.querySelector('[data-jscall-id="448"]')), 'step', value));
+        register_onjs(func, '5992549845749763564');
+        }
+
+        {
+        const func = (value=> update_node_attribute((document.querySelector('[data-jscall-id="448"]')), 'max', value));
+        register_onjs(func, '6621683660652466950');
+        }
+
+        {
+        const func = (value=> update_node_attribute((document.querySelector('[data-jscall-id="448"]')), 'min', value));
+        register_onjs(func, '14743835556997901112');
+        }
+
+        {
+        const func = (value=> update_node_attribute((document.querySelector('[data-jscall-id="448"]')), 'value', value));
+        register_onjs(func, '6077739256351139094');
+        }
+
+        {
+        const func = ((html)=> update_dom_node((document.querySelector('[data-jscall-id="449"]')), html));
+        register_onjs(func, '6299527719929835164');
+        }
+
+        {
+        const func = (function setup([scenes, duplicates]){
+    const canvas = (document.querySelector('[data-jscall-id="450"]'))
+    const renderer = WGLMakie.threejs_module(canvas, "9212402255751434961", 1200, 700)
+    WGLMakie.set_duplicate_references(duplicates)
+    const three_scenes = scenes.map(WGLMakie.deserialize_scene)
+    const cam = new THREE.PerspectiveCamera(45, 1, 0, 100)
+    console.log(three_scenes)
+    WGLMakie.start_renderloop(renderer, three_scenes, cam)
+
+    function get_plot(plot_uuid) {
+        for (const idx in three_scenes) {
+            const plot = three_scenes[idx].getObjectByName(plot_uuid)
+            if (plot) {
+                return plot
+            }
+        }
+        return undefined;
+    }
+
+    function add_plot(scene, plot) {
+        const mesh = WGLMakie.deserialize_plot(plot);
+    }
+    const context = {
+        three_scenes,
+        add_plot,
+        get_plot,
+        renderer
+    }
+    put_on_heap('61', context);
+}
+);
+        register_onjs(func, '15216996596131268502');
+        }
+
+        {const value = deserialize_js(__data_dependencies[1]);
+                          registered_observables['15216996596131268502'] = value;
+                          // update all onjs callbacks
+                          run_js_callbacks('15216996596131268502', value);}
+        {
+        const func = (function update_size(canvas_width){
+    const context = get_heap_object('61');
+    const w_h = deserialize_js(canvas_width);
+    context.renderer.setSize(w_h[0], w_h[1]);
+    var canvas = (document.querySelector('[data-jscall-id="450"]'))
+    canvas.style.width = w_h[0];
+    canvas.style.height = w_h[1];
+});
+        register_onjs(func, '4680399255922841411');
+        }
+
+        {put_on_heap('62', window); undefined;}
+        get_heap_object('62')['dont_even_try_to_reconnect'] = true;
+        get_heap_object('62')['independent_states'] = __data_dependencies[2];
+        get_heap_object('62')['dependent_states'] = __data_dependencies[3];
+
+}
+init_from_file(init_function, "89787fe6-df25-4204-9b0f-ed3a852bde7c.msgpack");
+
+    } catch (e) {
+        websocket_send({
+            msg_type: JSDoneLoading,
+            exception: String(e),
+            message: "Error during initialization",
+            stacktrace: e.stack
+        });
+    }
+};
+
+</script>
+</head>
+<body onload=__on_document_load__()>
+    <div id="application-dom" data-jscall-id="454">
+  <div data-jscall-id="445">
+    <div class="markdown-body" data-jscall-id="453">
+      <h1 data-jscall-id="446">Durchschnitts Temperatur per Bundesland</h1>
+      <h2 data-jscall-id="447">Reise vom Jahr 1881 bis 2019</h2>
+      <div class="w-64 p-2 items-center flex flex-row" data-jscall-id="444">
+        <input step="1" max="139" min="1" data-jscall-id="448" value="1" oninput="update_obs('6077739256351139094', parseFloat(value))" type="range" />
+        <span class="p-1" data-jscall-id="443">
+          <span data-jscall-id="449">1881</span>
+        </span>
+      </div>
+      <canvas height="700" data-jscall-id="450" width="1200"></canvas>
+      <p data-jscall-id="452">
+        <a href="https://opendata.dwd.de/climate_environment/CDC/regional_averages_DE/annual/" data-jscall-id="451">Quelle: Deutscher Wetterdienst</a>
+      </p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+
